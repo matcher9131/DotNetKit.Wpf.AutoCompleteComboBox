@@ -2080,6 +2080,9 @@ Zita Parten
 Zofia Yarberry
 Zulema Maxfield
 Zulma Avent
+えなりかずき
+せんだみつお
+みのもんた
 ";
 
         static readonly IReadOnlyList<Person> allPersons =

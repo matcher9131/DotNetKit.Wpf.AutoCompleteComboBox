@@ -196,7 +196,9 @@ namespace DotNetKit.Windows.Controls
 
         void UpdateSuggestionList()
         {
-            var text = Text;
+            // CHANGE: refer to EditableTextBox.Text instead of this.Text
+            // var text = Text;
+            var text = this.EditableTextBox.Text;
 
             if (text == previousText) return;
             previousText = text;
@@ -273,7 +275,9 @@ namespace DotNetKit.Windows.Controls
 
         Predicate<object> GetFilter()
         {
-            var filter = SettingOrDefault.GetFilter(Text, TextFromItem);
+            // CHANGE: refer to EditableTextBox.Text instead of this.Text
+            // var filter = SettingOrDefault.GetFilter(Text, TextFromItem);
+            var filter = SettingOrDefault.GetFilter(this.EditableTextBox.Text, TextFromItem);
 
             return defaultItemsFilter != null
                 ? i => defaultItemsFilter(i) && filter(i)
